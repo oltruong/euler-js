@@ -1,5 +1,7 @@
+"use strict";
+
 function problemT() {
-    var total=0;
+    let total=0;
     return total;
 }
 

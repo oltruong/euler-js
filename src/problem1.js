@@ -1,11 +1,13 @@
+"use strict";
+
 function problem1() {
-    var max = 1000;
+    let max = 1000;
     return multipleTotal(3, max) + multipleTotal(5, max) - multipleTotal(15, max);
 }
 
 function multipleTotal(multiple, max) {
-    var total = 0;
-    for (i = 0; i < max / multiple; i++) {
+    let total = 0;
+    for (let i = 0; i < max / multiple; i++) {
         total += i * multiple;
     }
     return total;
