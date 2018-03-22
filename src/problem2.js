@@ -2,8 +2,8 @@
 
 function problem2() {
     const MAX = 4000000;
-    let total = 0;
 
+    let total = 0;
     let previous = 1;
     let current = 2;
 
@@ -15,7 +15,6 @@ function problem2() {
         previous = current;
         current = next;
     }
-
     return total;
 }
 
