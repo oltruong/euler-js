@@ -1,6 +1,6 @@
 "use strict";
 
-function problemT() {
+function problem() {
     let total=0;
 
 
@@ -8,4 +8,4 @@ function problemT() {
     return total;
 }
 
-module.exports = problemT;
+module.exports = problem;
