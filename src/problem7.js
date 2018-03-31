@@ -1,6 +1,5 @@
 "use strict";
 const sieve = require("./sieve");
-const isPrime = require("./isprime");
 
 function problem() {
 
