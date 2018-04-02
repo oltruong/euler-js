@@ -1,11 +1,11 @@
 "use strict";
 
-let fs = require('fs');
+const fs = require('fs');
 
 function problem() {
     let total = 1;
 
-    const data = fs.readFileSync('input/problem8.txt', 'utf8');
+    const data = fs.readFileSync(__dirname+'/input/problem8.txt', 'utf8');
 
     for (let i = 1; i < data.length - 13; i++) {
 

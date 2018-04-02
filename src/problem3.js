@@ -1,6 +1,6 @@
 "use strict";
 
-const sieve = require("./sieve");
+const sieve = require(__dirname+"/lib/sieve");
 
 function problem() {
     const numberToCheck = 600851475143;

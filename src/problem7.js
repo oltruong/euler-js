@@ -1,5 +1,5 @@
 "use strict";
-const sieve = require("./sieve");
+const sieve = require(__dirname+"/lib/sieve");
 
 function problem() {
 
