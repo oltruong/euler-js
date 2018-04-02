@@ -1,5 +1,4 @@
 "use strict";
-const sieve = require("./sieve");
 
 function problem() {
     let result = 1;
