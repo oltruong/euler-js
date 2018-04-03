@@ -8,6 +8,8 @@ const problem5 = require('./problem5');
 const problem6 = require('./problem6');
 const problem7 = require('./problem7');
 const problem8 = require('./problem8');
+const problem9 = require('./problem9');
+const problem10 = require('./problem10');
 
 test('problem1', () => {
     expect(problem1()).toBe(233168);
@@ -39,4 +41,12 @@ test('problem7', () => {
 
 test('problem8', () => {
     expect(problem8()).toBe(23514624000);
+});
+
+test('problem9', () => {
+    expect(problem9()).toBe(31875000);
+});
+
+test('problem10', () => {
+    expect(problem10()).toBe(142913828922);
 });
