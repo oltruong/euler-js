@@ -6,11 +6,11 @@ function problem() {
     const max = (maxNumber * (maxNumber + 1) / 2);
     const sumSquared = max * max;
 
-    let sumOfSquare = 0;
-    for (let i = 1; i <= maxNumber; i++) {
-        sumOfSquare += i * i;
+    return sumSquared - computeSumOfSquare();
+
+    function computeSumOfSquare() {
+      return  [...Array(maxNumber+1).keys()].map(i=>i*i).reduce((a, b) => a + b, 0);
     }
-    return sumSquared - sumOfSquare;
 }
 
 module.exports = problem;

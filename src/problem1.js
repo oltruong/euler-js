@@ -6,11 +6,7 @@ function problem1() {
 }
 
 function multipleTotal(multiple, max) {
-    let total = 0;
-    for (let i = 0; i < max / multiple; i++) {
-        total += i * multiple;
-    }
-    return total;
+    return [...Array(Math.ceil(max / multiple)).keys()].map(i => i * multiple).reduce((a, b) => a + b, 0);
 }
 
 module.exports = problem1;
