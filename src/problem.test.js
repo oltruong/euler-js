@@ -17,6 +17,9 @@ const problem14 = require('./problem14');
 const problem15 = require('./problem15');
 const problem16 = require('./problem16');
 const problem17 = require('./problem17');
+const problem18 = require('./problem18');
+
+const problem67 = require('./problem67');
 
 test('problem1', () => {
     expect(problem1()).toBe(233168);
@@ -84,4 +87,11 @@ test('problem16', () => {
 
 test('problem17', () => {
     expect(problem17()).toBe(21124);
+});
+
+test('problem18', () => {
+    expect(problem18()).toBe(1074);
+});
+test('problem67', () => {
+    expect(problem67()).toBe(7273);
 });
