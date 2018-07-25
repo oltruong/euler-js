@@ -1,6 +1,6 @@
 # euler-js
-[![Build Status](https://travis-ci.org/oltruong/euler-js.svg?branch=master)](https://travis-ci.org/oltruong/euler-js)
+[![Build Status](https://travis-ci.org/oltruong/euler.svg?branch=master)](https://travis-ci.org/oltruong/euler)
 
-Project Euler (https://projecteuler.net/) implementation in JS
+Project Euler (https://projecteuler.net/) implementation in Java and JS
 
 The purpose is to learn while having fun!

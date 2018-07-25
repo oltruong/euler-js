@@ -1,6 +1,21 @@
-language: node_js
-node_js:
-  - "node"
-  - "lts/*"
-sudo: false
-cache: yarn
+matrix:
+  include:
+  - language: nodejs
+    node_js:
+    - "node"
+    - "lts/*"
+
+    before_script:
+    - (cd javascript && yarn install)
+    script:
+    - (cd javascript && yarn test)
+
+  - language: java
+    jdk: openjdk10
+    script:
+    - (cd java && ./gradlew check  --scan -s)
+    cache:
+      directories:
+      - '$HOME/.m2/repository'
+      - '$HOME/.gradle'
+      - '.gradle'
