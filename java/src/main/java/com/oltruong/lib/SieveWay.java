@@ -8,7 +8,8 @@ public final class SieveWay {
 
     public static boolean[] buildNonPrimesArray(int value) {
         boolean[] nonPrimes = new boolean[value + 1];
-
+        nonPrimes[0] = true;
+        nonPrimes[1] = true;
         int index = 2;
         while (index <= value) {
             if (!nonPrimes[index]) {
