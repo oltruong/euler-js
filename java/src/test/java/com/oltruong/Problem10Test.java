@@ -6,10 +6,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @ExtendWith(TimingExtension.class)
-class Problem8Test {
+class Problem10Test {
 
     @Test
     void getResult() throws Exception{
-        assertEquals(23_514_624_000L, Problem8.getResult());
+        assertEquals(142_913_828_922L, Problem10.getResult());
     }
 }

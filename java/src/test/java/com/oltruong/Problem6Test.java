@@ -10,6 +10,6 @@ class Problem6Test {
 
     @Test
     void getResult() {
-        assertEquals(25164150, Problem6.getResult());
+        assertEquals(25_164_150, Problem6.getResult());
     }
 }

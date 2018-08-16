@@ -10,6 +10,6 @@ class Problem2Test {
 
     @Test
     void getResult() {
-        assertEquals(4613732, Problem2.getResult());
+        assertEquals(4_613_732, Problem2.getResult());
     }
 }

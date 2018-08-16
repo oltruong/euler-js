@@ -10,6 +10,6 @@ class Problem9Test {
 
     @Test
     void getResult() throws Exception{
-        assertEquals(31875000, Problem9.getResult());
+        assertEquals(31_875_000, Problem9.getResult());
     }
 }
