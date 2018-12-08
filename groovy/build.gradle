@@ -1,0 +1,25 @@
+
+plugins {
+    id "com.gradle.build-scan" version "2.0.2"
+}
+
+buildScan { termsOfServiceUrl = 'https://gradle.com/terms-of-service'; termsOfServiceAgree = 'yes' }
+
+apply plugin: 'groovy'
+
+group = 'com.oltruong'
+
+version = '0.1.0-SNAPSHOT'
+
+description = "Euler project. Groovy proposal"
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.5.4'
+    testCompile "org.spockframework:spock-core:1.2-groovy-2.4"
+}
+
+

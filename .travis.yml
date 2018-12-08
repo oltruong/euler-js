@@ -11,9 +11,19 @@ matrix:
     - (cd javascript && yarn test)
 
   - language: java
-    jdk: openjdk10
+    jdk: openjdk11
     script:
     - (cd java && ./gradlew check  --scan -s)
+    cache:
+      directories:
+      - '$HOME/.m2/repository'
+      - '$HOME/.gradle'
+      - '.gradle'
+
+  - language: groovy
+    jdk: openjdk8
+    script:
+    - (cd groovy && ./gradlew check  --scan -s)
     cache:
       directories:
       - '$HOME/.m2/repository'

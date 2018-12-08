@@ -1,12 +1,12 @@
 plugins {
     id 'java-library'
-    id "com.gradle.build-scan" version "1.14"
+    id "com.gradle.build-scan" version "2.0.2"
 }
 
 buildScan { termsOfServiceUrl = 'https://gradle.com/terms-of-service'; termsOfServiceAgree = 'yes' }
 
-sourceCompatibility = 1.10
-targetCompatibility = 1.10
+sourceCompatibility = 1.11
+targetCompatibility = 1.11
 
 group = 'com.oltruong'
 
@@ -15,11 +15,10 @@ version = '0.1.0-SNAPSHOT'
 description = "Euler project. Java proposal"
 
 dependencies {
-    def junitVersion = '5.2.0'
+    def junitVersion = '5.3.2'
 
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitVersion
-    testCompile group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
-    testRuntime group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: junitVersion
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: junitVersion
 }
 
 
@@ -28,6 +27,9 @@ repositories {
 }
 
 test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        includeEngines 'junit-jupiter'
+        failFast = true
+    }
 }
 
