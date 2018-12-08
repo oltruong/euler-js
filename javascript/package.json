@@ -1,4 +1,7 @@
 {
+  "description": "euler project solutions in javascript",
+  "license": "GNU General Public License v3.0",
+  "repository": "github:oltruong/euler",
   "devDependencies": {
     "jest": "23.6.0"
   },
