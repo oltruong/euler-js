@@ -1,16 +1,17 @@
 matrix:
   include:
-  - language: nodejs
-    node_js:
-    - "node"
-    - "lts/*"
+  - name: "Javascript"
+    language: nodejs
+    before_install: nvm install node
 
     before_script:
-    - (cd javascript && yarn install)
+    - (cd javascript && npm install)
     script:
-    - (cd javascript && yarn test)
+    - (cd javascript && npm test)
+    cache: npm
 
-  - language: java
+  - name: "Java"
+    language: java
     jdk: openjdk11
     script:
     - (cd java && ./gradlew check  --scan -s)
@@ -20,7 +21,8 @@ matrix:
       - '$HOME/.gradle'
       - '.gradle'
 
-  - language: groovy
+  - name: "Groovy"
+    language: groovy
     jdk: openjdk8
     script:
     - (cd groovy && ./gradlew check  --scan -s)
