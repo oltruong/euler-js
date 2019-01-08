@@ -1,9 +1,9 @@
 package com.oltruong
 
-class Problem1 {
+class Problem1  {
+
     static def getValue() {
-        (0..999)
-                .findAll { multipleOf3or5(it) }
+        (0..999).findAll { multipleOf3or5(it) }
                 .sum()
     }
 
