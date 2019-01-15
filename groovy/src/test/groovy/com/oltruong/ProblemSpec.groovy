@@ -6,7 +6,7 @@ import spock.lang.Unroll
 class ProblemSpec extends Specification {
 
     @Unroll
-    def "check problem #number - #description "() {
+    def "problem #number - #description "() {
         expect:
         value == expected
 
@@ -15,5 +15,6 @@ class ProblemSpec extends Specification {
         1      || Problem1.value || 233_168   || "Multiples of 3 and 5"
         2      || Problem2.value || 4_613_732 || "Even Fibonacci numbers"
         3      || Problem3.value || 6_857     || "Largest prime factor"
+        4      || Problem4.value || 906609     || "Largest palindrome product"
     }
 }

@@ -32,8 +32,8 @@ class Problem4 {
 
         boolean verdict = true;
 
-        for (int i = 0; i < intArray.length; i++) {
-            verdict &= intArray[i] == intArray[intArray.length - i - 1];
+        for (int i = 0; verdict && i < intArray.length ; i++) {
+            verdict = intArray[i] == intArray[intArray.length - i - 1];
         }
         return verdict;
     }
@@ -44,8 +44,8 @@ class Problem4 {
         final char[] chars = productString.toCharArray();
 
         boolean verdict = true;
-        for (int j = 0; j < chars.length; j++) {
-            verdict &= chars[j] == chars[chars.length - 1 - j];
+        for (int j = 0; verdict && j < chars.length; j++) {
+            verdict = chars[j] == chars[chars.length - 1 - j];
         }
 
         return verdict;
