@@ -1,9 +1,12 @@
 plugins {
     id 'java-library'
-    id "com.gradle.build-scan" version "2.0.2"
+    id "com.gradle.build-scan" version "2.1"
 }
 
-buildScan { termsOfServiceUrl = 'https://gradle.com/terms-of-service'; termsOfServiceAgree = 'yes' }
+buildScan {
+    termsOfServiceUrl = 'https://gradle.com/terms-of-service'
+    termsOfServiceAgree = 'yes'
+}
 
 sourceCompatibility = 1.11
 targetCompatibility = 1.11
