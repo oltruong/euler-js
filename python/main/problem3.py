@@ -4,13 +4,12 @@ from lib.primes_finder import find_primes
 
 
 def get_problem3():
-    number = 600851475143
+    number = 600_851_475_143
     return largest_prime_factor(number)
 
 
 def largest_prime_factor(number):
     primes = find_primes(int(sqrt(number)))[::-1]
-
     for i in primes:
         if number % i == 0:
             return i

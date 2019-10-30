@@ -8,10 +8,10 @@ from problem5 import get_problem5
 from problem6 import get_problem6
 
 test_data = [
-    [get_problem1, 233168],
-    [get_problem2, 4613732],
-    [get_problem3, 6857],
-    [get_problem4, 906609],
+    [get_problem1, 233_168],
+    [get_problem2, 4_613_732],
+    [get_problem3, 6_857],
+    [get_problem4, 906_609],
     [get_problem5, 232_792_560],
     [get_problem6, 25_164_150],
 ]
