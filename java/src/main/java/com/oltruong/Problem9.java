@@ -17,6 +17,4 @@ class Problem9 {
 
         return 0;
     }
-
-
 }
