@@ -9,10 +9,11 @@ class Problem3 {
     }
 
     static def largestPrimeFactor(long number) {
-        List<Boolean> primes= PrimeFinder.primeFinder(number)
+        int sqrtNumber = (int) Math.sqrt(number)
+        List<Boolean> primes = PrimeFinder.primeFinder(sqrtNumber)
 
-        for (possiblePrime in  (int) Math.sqrt(number)..2){
-            if (primes.get(possiblePrime) && number % possiblePrime==0 ){
+        for (possiblePrime in sqrtNumber..2) {
+            if (primes.get(possiblePrime) && number % possiblePrime == 0) {
                 return possiblePrime
             }
         }

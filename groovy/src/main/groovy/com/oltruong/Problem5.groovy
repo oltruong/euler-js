@@ -22,7 +22,7 @@ class Problem5 {
                 while (maxPower<=number){
                     maxPower  *=i
                 }
-                result *=maxPower
+                result *=maxPower/i
             }
         }
 
