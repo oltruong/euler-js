@@ -1,4 +1,5 @@
-from lib.primes_finder import find_primes
+from functools import reduce
+from operator import mul
 
 
 def get_problem11():
@@ -12,28 +13,24 @@ def find_largest_product_in_grid(adjacent_numbers):
 
     lines = grid.splitlines()
     lines.remove("")
-    matrix = [line.split(" ") for line in lines]
+    matrix = [list(map(int, line.split(" "))) for line in lines]
 
     for x in range(0, grid_length):
         for y in range(0, grid_length):
             max_border = grid_length - adjacent_numbers
             range_product = range(0, adjacent_numbers)
-            horizontal = product([int(matrix[x][y + i]) for i in range_product]) if y <= max_border else 0
-            vertical = product([int(matrix[x + i][y]) for i in range_product]) if x <= max_border else 0
-            diagonal1 = product(
-                [int(matrix[x + i][y + i]) for i in range_product]) if x <= max_border and y <= max_border else 0
-            diagonal2 = product(
-                [int(matrix[x + i][y - i]) for i in range_product]) if x <= max_border and y >= adjacent_numbers else 0
+            horizontal = reduce(mul, [matrix[x][y + i] for i in range_product]) if y <= max_border else 0
+            vertical = reduce(mul, [matrix[x + i][y] for i in range_product]) if x <= max_border else 0
+            diagonal1 = reduce(mul,
+                               [matrix[x + i][y + i] for i in
+                                range_product]) if x <= max_border and y <= max_border else 0
+            diagonal2 = reduce(mul,
+                               [matrix[x + i][y - i] for i in
+                                range_product]) if x <= max_border and y >= adjacent_numbers else 0
             largest_product = max(largest_product, horizontal, vertical, diagonal1, diagonal2)
 
     return largest_product
 
-
-def product(list):
-    result = 1
-    for item in list:
-        result *= item
-    return result
 
 grid = """
 08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
@@ -57,3 +54,4 @@ grid = """
 20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 """
+
