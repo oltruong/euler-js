@@ -15,10 +15,9 @@ function problem() {
            paths[key] = 1;
             return 1;
         } else {
-            paths[key] =findPaths(x, y - 1) + findPaths(y, x - 1);
+            paths[key] =findPaths(x, y - 1) + findPaths(x-1, y);
             return paths[key];
         }
     }
 }
-
 module.exports = problem;
