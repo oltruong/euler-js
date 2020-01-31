@@ -16,6 +16,7 @@ from problem13 import get_problem13
 from problem14 import get_problem14
 from problem15 import get_problem15
 from problem16 import get_problem16
+from problem17 import get_problem17
 
 test_data = [
     [get_problem1, 233_168],
@@ -34,6 +35,7 @@ test_data = [
     [get_problem14, 837_799],
     [get_problem15, 137_846_528_820],
     [get_problem16, 1_366],
+    [get_problem17, 21_124],
 ]
 
 
