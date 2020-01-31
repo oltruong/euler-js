@@ -4,5 +4,4 @@ def get_problem16():
 
 def find_sum_digits(number, power):
     total = number ** power
-    print(total)
     return sum(list(map(int, list(str(total)))))
