@@ -3,12 +3,12 @@
   "license": "GNU General Public License v3.0",
   "repository": "github:oltruong/euler",
   "devDependencies": {
-    "jest": "24.9.0"
+    "jest": "25.5.4"
   },
   "scripts": {
     "test": "jest"
   },
   "dependencies": {
-    "big-integer": "^1.6.46"
+    "big-integer": "^1.6.48"
   }
 }
