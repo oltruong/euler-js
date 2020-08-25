@@ -11,7 +11,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11.0.4
-      - name: Gradle build
+      - name: Lein test
         working-directory: clojure
         run: lein test
         env:
