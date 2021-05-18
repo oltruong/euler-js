@@ -1,13 +1,15 @@
 def get_problem2():
-    sum_of_even_valued_terms = 2
+    return sum(number for number in fibonacci_sequence(4000000) if is_even(number))
 
-    first_term, second_term = 1, 2
-    new_term = first_term+second_term
 
-    while new_term < 4000000:
-        if new_term % 2 == 0:
-            sum_of_even_valued_terms += new_term
-        first_term, second_term = second_term, new_term
-        new_term = first_term + second_term
+def fibonacci_sequence(max):
+    previous_number = 1
+    yield previous_number
+    number = 2
+    while number < max:
+        yield number
+        previous_number, number = number, previous_number + number
 
-    return sum_of_even_valued_terms
+
+def is_even(number):
+    return number % 2 == 0
