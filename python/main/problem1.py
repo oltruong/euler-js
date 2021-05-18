@@ -1,7 +1,5 @@
 def get_problem1():
-    return sum(
-        filter(multiple_of_3_or_5, range(1000))
-    )
+    return sum(number for number in range(1000) if multiple_of_3_or_5(number))
 
 
 def multiple_of_3_or_5(number):
